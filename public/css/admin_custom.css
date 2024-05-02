@@ -1,0 +1,12 @@
+.login-page,
+.register-page {
+    background-color: #343a40 !important;
+}
+
+.login-logo img {
+    width: 260px;
+}
+
+.main-sidebar .brand-link span {
+    display: inline-block !important;
+}

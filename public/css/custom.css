@@ -1,0 +1,513 @@
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 767.98px) {
+    .login-box{
+        min-width: inherit !important;
+    }
+    .user-wrp .actions {
+        display: block;
+        text-align: left;
+    }
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group-append {
+    margin-left: -1px;
+}
+
+.input-group-append, .input-group-prepend {
+    display: flex;
+}
+
+.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.datepicker td, .datepicker th {
+    padding: 5px 10px;
+}
+/*Acceptance Pending*/
+.status-1{
+    background: #cac9c6;
+    min-width: 140px;
+}
+/*Accepted*/
+.status-2{
+    background: #4CB216;
+    min-width: 140px;
+}
+/*Rejected*/
+.status-3{
+    background: #FC6A64;
+    min-width: 140px;
+}
+/*Approved*/
+.status-4{
+    background: #ee86e1;
+    min-width: 140px;
+}
+/*Declined*/
+.status-5{
+    background: #1EA6C7;
+    min-width: 140px;
+}
+/*Delivered*/
+.status-6{
+    background: #EBAB1B;
+    min-width: 140px;
+}
+/*Cancelled*/
+.status-7{
+    background: #8189f1;
+    min-width: 140px;
+}
+/*Re-Open*/
+.status-8{
+    background: #DDDDDD;
+    min-width: 140px;
+}
+
+/*Completed*/
+.status-9{
+    background: #9f191f;
+    min-width: 140px;
+}
+
+.status-lost{
+    background: #9f191f;
+}
+.status:hover {
+    color:#ffffff;
+}
+
+/*UI css */
+span.badge-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor:pointer;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #CCCCCC;
+}
+
+.user-wrp .actions .btn {
+    height: 38px;
+    margin-left: 5px;
+}
+.user-wrp .actions {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+
+.detail-actions {
+    display: flex;
+}
+
+.captch-box {
+    flex-direction: column;
+}
+
+.invalid-feedback{
+    display: block;
+
+}
+
+.user-img {
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    overflow: hidden;
+}
+
+.user-img.upload-img {
+    position: relative;
+    overflow: inherit;
+}
+
+
+.overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(80, 79, 79, 0.8) ;
+    /* url("../images/loader.gif") center no-repeat; */
+}
+/* Turn off scrollbar when body element has the loading class */
+body.loading{
+    overflow: hidden;
+}
+/* Make spinner image visible when body element has the loading class */
+body.loading .overlay{
+    display: block;
+}
+
+.dropdown-menu{
+    transform: translate3d(2px, 35px, 0px)!important;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin3D {
+  from {
+    transform: rotate3d(.5,.5,.5, 360deg);
+  }
+  to{
+    transform: rotate3d(0deg);
+  }
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+    transform: scale(.75);
+  }
+}
+
+
+
+.spinner-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* pulse-bubble */
+
+.pulse-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pulse-bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color:  rgb(71, 197, 247);
+}
+
+.pulse-bubble-1 {
+    animation: pulse .4s ease 0s infinite alternate;
+}
+.pulse-bubble-2 {
+    animation: pulse .4s ease .2s infinite alternate;
+}
+.pulse-bubble-3 {
+    animation: pulse .4s ease .4s infinite alternate;
+}
+
+.extra-links .btn {
+    min-width: 178px;
+}
+
+.pref-right .btn {
+    min-width: 225px;
+}
+
+.layout {
+    position: relative;
+    min-height: calc(100vh - 190px);
+    padding-bottom: 50px;
+}
+
+label.error {
+    color: #ff0000;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #e9ecef!important;
+}
+
+.pac-container {
+    background-color: #FFF;
+    z-index: 10000 !important;
+    position: fixed;
+    display: inline-block;
+    float: left;
+}
+.custom-phoca{
+    width:35px !important;
+    height:35px !important;
+    margin-right: 5px;
+}
+.my-rating img{
+    height: 40px;
+    width: 40px;
+}
+.modal{
+    z-index: 20;
+}
+.modal-backdrop{
+    z-index: 10;
+}
+
+.app__messenger {
+    border: none !important;
+    box-shadow: 3px 2px 20px 2px rgba(0,0,0,0.15);
+    max-width: 100%;
+}
+
+.complaint-wrapper .accordion.report-acco button.btn.btn-link span.complaint-status {
+    width: auto !important;
+}
+
+.complaint-wrapper .accordion.report-acco button.btn.btn-link span.complaint-status.open {
+    background: #1EA6C7;
+}
+
+.complaint-wrapper .accordion.report-acco button.btn.btn-link span.complaint-status.hold {
+    background: #FC6A64;
+}
+
+/*08-01-2021*/
+.carry-header .navbar ul li select {
+    /* background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 30px; */
+}
+
+.carry-header .navbar ul li select option {
+    background: #67bfe2;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 10px #D2D3D769 !important;
+    border: 1px solid #DFE1E8;
+    border-radius: 5px;
+    padding-left: 15px !important;
+}
+
+.custom-control-label::before {
+    border: #707070 solid 1px;
+    border-radius: 50% !important;
+}
+
+img.w-17 {
+    width: 17px;
+}
+
+span.badge-tick {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: #66c5ea;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor:pointer;
+}
+span.badge-tick img {
+    width: 13px;
+}
+.photo-wrp.placeholder.raise-request-placeholder {
+    min-height: 300px;
+}
+
+.request-view-btn-wrapper {
+    position: absolute;
+    top: -3.5rem;
+    right: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .user-wrp .actions {
+        display: block;
+        text-align: right;
+    }
+    .user-wrp .actions .btn {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+@media (max-width: 767.98px) {
+    .user-wrp .actions {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    .connected-list {
+        position: relative;
+    }
+    .rating {
+        margin-right: 0;
+    }
+    .user-mob {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .user-avtar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .user-connected-wrp .user-info {
+        margin-bottom: 0;
+        margin-left: 15px;
+        display: inline-block;
+        width: calc(100% - 80px);
+    }
+    span.loc {
+        display: block;
+    }
+    .user-connected-wrp .rating {
+        position: relative;
+        left: 0;
+        margin-left: 75px;
+        margin-top: 10px;
+    }
+    .photo-wrp.placeholder.raise-request-placeholder {
+        min-height: 150px;
+    }
+}
+.cat-images{
+    height: 65px !important;
+    width: 65px !important;
+}
+
+/*** jquery UI autocomplete ***/
+.ui-autocomplete-loading {
+    background: white url("../images/auto-loading.gif") right center no-repeat !important;
+}
+
+.ui-autocomplete {
+    max-height: 250px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+    height: 250px;
+    border-radius: 2px;
+    border-top: 1px solid #d9d9d9;
+    font-family: Arial,sans-serif;
+    box-shadow: 0 2px 6px #0000004d;
+}
+
+.ui-autocomplete li {
+    font-size: 12px;
+    color: #999;
+}
+
+.ui-autocomplete li:hover {
+    background-color:#f5f2f0 !important;
+    font-size: 12px !important;
+    border: none;
+}
+
+.ui-menu .ui-menu-divider {
+    border: none !important;
+}
+
+.ui-autocomplete3,.ui-autocomplete4 {
+    z-index: 9999 !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    border: none !important;
+    background: #f5f2f0 !important;
+}
